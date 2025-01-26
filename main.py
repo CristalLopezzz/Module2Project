@@ -69,3 +69,48 @@ if purchase_total >= 25:
 # Calculate and display final discount
 final_discount = discount * 100
 print("Your community rewards discount: " + str(final_discount) + "%")
+
+# Our complete menu organized by category
+donut_menu = {
+    'Small Batch': [
+    'Wild Rice & Honey', # Made with native MN wild rice 
+    'Maple Bacon', # Using Red Table Meat Co. bacon
+    'Swedish Cardamon' # Honoring our Nordic heritage
+    ],
+    'Seasonal': [
+    'Apple Cider', # Local Honeycrip apples
+    'Jucy Lucy', # Cheese-filled tribute to Minneapolis 
+    'Lake of the Woods' # Wild blueberry glazed
+    ], 
+    'Local Collabs': [
+    'Spyhouse Coffe Cake',
+    'Fulton Beer & Pretzel', 
+    'Sweet Science Ice Cream'
+    ]
+}
+
+# Locally-sourced toppings
+toppings = [
+    'House-made Sprinkles',
+    'Candied Hazelnuts', # From MN growers
+    'Bee Pollen', # From local apiaries
+    'Cookies Butter Drizzle'
+]
+
+# Track our morning sales 
+morning_sales = []
+
+# Record our first sale
+morning_sales.append({
+    'item': 'Wild Rice & Honey',
+    'quantity': 2,
+    'toppings': ['Bee Pollen'],
+    'time': '7:30 AM'
+})
+
+# Display our current menu
+print("Today's Morning Menu:")
+for category, items in donut_menu.items():
+    print(category + ":")
+    for item in items:
+        print(" - " + item)
